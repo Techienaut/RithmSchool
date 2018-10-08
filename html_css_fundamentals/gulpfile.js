@@ -11,6 +11,6 @@ gulp.task('pug', function() {
       .pipe(gulp.dest('.')); // tell gulp our output folder
 });
 gulp.task('watch:pug', function(){
-  return gulp.watch('templates/**/*.pug', ['pug']);
+  return gulp.watch('pug_templates/**/*.pug', ['pug']);
 });
 gulp.task('default', ['watch:pug', 'pug']);
