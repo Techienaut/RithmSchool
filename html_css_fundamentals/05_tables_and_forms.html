@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Document</title>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th>heading 1</th>
+          <th>heading 2</th>
+          <th>heading 3</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>content</td>
+          <td>content</td>
+          <td>content</td>
+        </tr>
+        <tr>
+          <td>content</td>
+          <td>content</td>
+          <td>content</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>content</td>
+          <td>content</td>
+          <td>content</td>
+        </tr>
+      </tfoot>
+    </table>
+    <!-- Action: url browser goes to after submission-->
+    <!-- In this case, it stays on the same page-->
+    <form action="#">
+      <div>
+        <label for="username">Username</label>
+        <input type="text" id="username"/>
+      </div>
+      <div>
+        <label for="password">Password</label>
+        <input type="password" id="password"/>
+      </div>
+      <div>
+        <label>Favorite Instructor</label>
+        <label for="elie">Elie</label>
+        <input type="radio" name="favorite_instructor" id="elie"/>
+        <label for="matt">Matt</label>
+        <input type="radio" name="favorite_instructor" id="matt"/>
+        <label for="tim">Tim</label>
+        <input type="radio" name="favorite_instructor" id="tim"/>
+      </div>
+      <div>
+        <label>Favorite Programming Languages</label>
+        <label for="ruby">Ruby</label>
+        <input type="checkbox" name="favorite_language" value="ruby" id="ruby"/>
+        <label for="javascript">Javascript</label>
+        <input type="checkbox" name="favorite_language" value="javascript" id="javascript"/>
+        <label for="python">Python</label>
+        <input type="checkbox" name="favorite_language" value="python" id="python"/>
+        <label for="go">Go</label>
+        <input type="checkbox" name="favorite_language" value="go" id="go"/>
+      </div>
+      <div>
+        <label>Additional Comments</label>
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+      </div>
+      <div>
+        <input type="submit" value="submit"/>
+      </div>
+    </form>
+  </body>
+</html>
