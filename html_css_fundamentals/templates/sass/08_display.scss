@@ -1,0 +1,35 @@
+div {
+    height: 200px;
+    width: 200px;
+    margin: 5px;
+    background: green;
+}
+#three, #four {
+    display: inline;
+    /*Inline doesn't respect width and height*/
+    /*Use inline-block instead*/
+}
+#table {
+    display: table;
+}
+.row {
+    display: table-row;
+}
+.cell {
+    display: table-cell;
+    border: 1px solid black;
+    padding: 10px;
+}
+#outer {
+    display: table;
+    width: 600px;
+    height: 600px;
+    background-color: blue;
+    color: white;
+}
+#inner {
+    display: table-cell;
+    vertical-align: middle;
+    /* verticle-align contents inside Cell */
+    text-align: center;
+}
