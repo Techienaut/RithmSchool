@@ -1,3 +1,4 @@
+
 var gulp = require('gulp'),  
   pug = require('gulp-pug'),
   sass = require('gulp-sass');
@@ -12,9 +13,11 @@ gulp.task('pug', function() {
       }
       )) // pipe to pug plugin
       .pipe(gulp.dest(htmlDest)); // tell gulp our output folder
+//      done();
 });
 gulp.task('watch:pug', function(){
-  return gulp.watch(pugFiles, ['pug']);
+  return gulp.watch(pugFiles, gulp.series('pug'));
+//  done();
 });
 
 var sassFiles = 'templates/sass/**/*.scss',
@@ -25,9 +28,11 @@ gulp.task('sass', function(){
           outputStyle: 'expanded'
         }).on('error', sass.logError))
         .pipe(gulp.dest(cssDest));
+//  done();
 });
 gulp.task('watch:sass', function(){
-  return gulp.watch(sassFiles, ['sass']);
+  return gulp.watch(sassFiles, gulp.series('sass'));
+//  done();
 });
 
-gulp.task('default', ['watch:sass', 'sass', 'watch:pug', 'pug']);
+gulp.task('default', gulp.parallel('watch:sass', 'sass', 'watch:pug', 'pug'));
